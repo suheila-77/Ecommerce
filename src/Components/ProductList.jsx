@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Product from './Product';
 import ClipLoader from 'react-spinners/ClipLoader';
 
+
 const ProductList = () => {
 const [data, setData] = useState([]);
 const [loading, setLoading] = useState(false);
@@ -39,7 +40,7 @@ const [searchItem, setSearchItem] = useState('');
           <ClipLoader loading={loading} size={150} />
         </div>
       ) : (
-        <div className=" sm:grid gap-2 sm:grid-cols-[300px_300px_300px_300px] sm:w-full sm:ml-10 grid grid-cols-[200px_200px] pt-10px">
+        <div className=" sm:grid gap-2 sm:grid-cols-[300px_300px_300px_300px] sm:w-full sm:ml-10 grid grid-cols-[200px_200px] pt-[80px] justify-center">
           {data
             .filter((product) =>
               searchItem
