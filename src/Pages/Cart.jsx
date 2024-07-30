@@ -29,7 +29,7 @@ const Cart = () => {
 
 {
    allItems.length>0?  allItems.map((item)=>{
-        return <div className=' w-[400px] ml-[85px] border-2 flex mt-5 items-center gap-6 border-gray-300 px-4 py-5 sm:w-[500px] h-[160px] rounded'>
+        return <div className=' w-[400px] ml-[100px] border-2 flex mt-5 items-center gap-6 border-gray-900 px-4 py-5 sm:w-[500px] h-[160px] rounded'>
             <img  className=" ml-10 w-[150px] h-[150px] rounded" src={item.image} alt="" />
 
 
@@ -49,7 +49,7 @@ const Cart = () => {
  
        
                     </div>
-                  <Price /> 
+                 {allItems.length>0 ? <Price/> : ""}
 
                 </div>
                 <Toaster/>
